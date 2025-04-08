@@ -99,7 +99,7 @@ st.write("Cluster destribution")
 
 c=st.slider("**Select the number of Clusters:**", 2,11,1)
 if st.button("**Show Clusters**"): 
-    data=df.drop('date',axis=1).sample(frac=0.01,random_state=42)
+    data=df.drop('date',axis=1).sample(frac=0.1,random_state=42)
     SS=StandardScaler()
     dfs=SS.fit_transform (data)
     pca=PCA(n_components=0.75,random_state=42)
